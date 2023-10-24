@@ -40,6 +40,8 @@ insert into producto(nombre, cantidad, precio, categoria)
 values 	("muslo"  , 2, 5000, "carniceria"),
 		("cebolla", 4, 2500, "verduleria"),
         ("coca",    6, 7000, "gaseosa"),
-		("kin",     8, 6400, "agua"),
+		("kin",     8, 6000, "agua"),
         ("churro", 12, 5000, "panaderia"),
-        ("tang",   20, 2000, "jugo"); 
+        ("tang",   20, 2000, "jugo");
+
+set global log_bin_trust_function_creators = 1;
