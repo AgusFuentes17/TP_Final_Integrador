@@ -1,0 +1,10 @@
+
+Copiar la carpeta "apache-tomcat-9.0.41" y pegar en la unidad "C" (disco local C).
+
+Entre a la carpeta "apache-tomcat-9.0.41", luego, entre a la carpeta "conf".
+Busque el archivo "tomcat-users.xml" y editelo con el block de notas:
+
+Copiar y pegar la siguiente línea al final del documento "tomcat-users.xml"
+AMTES de la etiqueta de cierre </tomcat-users>
+
+<user password="admin" roles="manager-script,admin,manager-gui" username="admin"/>
