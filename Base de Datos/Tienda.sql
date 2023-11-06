@@ -36,3 +36,10 @@ create table Producto_Venta(
     foreign key(idProducto) references Producto(idProducto)
 );
 
+insert into producto(nombre, cantidad, precio, categoria)
+values 	("muslo"  , 2, 5000, "carniceria"),
+		("cebolla", 4, 2500, "verduleria"),
+        ("coca",    6, 7000, "gaseosa"),
+		("kin",     8, 6000, "agua"),
+        ("churro", 12, 5000, "panaderia"),
+        ("tang",   20, 2000, "jugo");
