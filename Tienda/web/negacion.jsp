@@ -3,8 +3,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Tienda - Vender</title>
+        <title>Tienda - Negación</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="tienda.ico">
     </head>
     <body>
@@ -37,20 +38,9 @@
         
         <div style="margin-top: 9vh; position: relative;">
             <img class="img fluid imgFondo" src="tienda.jpg" style="width: 100%">
-            <div class="text-center" style="background-color: rgba(255, 255, 255, 0.8); width: 60%; top: 15%; position: absolute; margin-left: 20%; margin-right: 20%;">
-                <h1>Ingrese el ID:</h1>
-                <form action="Vender" method="post">
-                    <div class="form-group row" style="margin-bottom: 5vh; margin-top: 5vh;">
-                        <div class="col-sm">
-                          <input type="number" class="btn btn-dark" id="ID" placeholder="Ingrese ID..." min="1" required>
-                        </div> 
-                     </div>
-                </form>
+            <div class="text-center" style="background-color: rgba(255, 255, 255, 0.8); width: 60%; top: 25%; position: absolute; margin-left: 20%; margin-right: 20%;">
+                <h1>La acción no se pudo realizar correctamente</h1>
             </div>
         </div>
-        
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
