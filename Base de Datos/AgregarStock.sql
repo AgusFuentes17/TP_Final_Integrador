@@ -1,4 +1,6 @@
-CREATE PROCEDURE `AgregarStock` (nombre varchar(40), cant double)
+CREATE PROCEDURE `AgregarStock` (nomb varchar(40), cant double)
 BEGIN
-alter table 
+    UPDATE producto
+    SET cantidad = cantidad + cant
+    WHERE nombre = nomb;
 END
