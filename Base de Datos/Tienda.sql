@@ -28,15 +28,17 @@ create table HistorialProducto(
     foreign key(idProducto) references Producto(idProducto)
 );
 
-drop table if exists Producto_Venta;
-create table Producto_Venta(
+drop table if exists DescripcionVenta;
+create table DescripcionVenta(
 	idProducto int not null,
 	idVenta int not null,
+    cant int not null,
+    precio double not null,
     foreign key(idVenta) references Venta(idVenta),
     foreign key(idProducto) references Producto(idProducto)
 );
 
-insert into producto(nombre, cantidad, precio, categoria)
+insert into Producto(nombre, cantidad, precio, categoria)
 values 	("muslo"  , 2, 5000, "carniceria"),
 		("cebolla", 4, 2500, "verduleria"),
         ("coca",    6, 7000, "gaseosa"),
