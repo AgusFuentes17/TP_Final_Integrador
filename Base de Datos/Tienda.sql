@@ -39,18 +39,14 @@ create table DescripcionVenta(
     foreign key(idProducto) references Producto(idProducto)
 );
 
-<<<<<<< HEAD
-insert into Producto(nombre, cantidad, precio, categoria)
-=======
+
 insert into producto(nombre, cantidad, precio, categoria)
->>>>>>> dellano
 values 	("muslo"  , 2, 5000, "carniceria"),
 		("cebolla", 4, 2500, "verduleria"),
         ("coca",    6, 7000, "gaseosa"),
 		("kin",     8, 6000, "agua"),
         ("churro", 12, 5000, "panaderia"),
         ("tang",   20, 2000, "jugo");
-<<<<<<< HEAD
         
 delimiter $$
 CREATE PROCEDURE `agregar_producto_sp` (IN nom varchar(45), IN categ varchar(45), IN pre double, IN cant int)
@@ -145,7 +141,5 @@ Begin
 	insert into HistorialProducto (fecha, idVenta, idProducto, cantidad) values(fec, new.idVenta, new.idProducto, new.cantidad);
 end$$
 delimiter ;
-=======
 
 set global log_bin_trust_function_creators = 1;
->>>>>>> dellano
