@@ -1,3 +1,5 @@
+use Tienda;
+
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
 -- Host: localhost    Database: tienda
@@ -51,10 +53,14 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `desc_venta_after_insert` AFTER INSERT ON `descripcionventa` FOR EACH ROW Begin
-	declare fec date;
-    set fec = curdate();
-	insert into HistorialProducto (fechaHistorial, idVenta, idProducto, cantidad) values(curdate(), new.idVenta, new.idProducto, new.cantidad);
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `desc_venta_after_insert` AFTER INSERT ON `descripcionventa` FOR EACH ROW Begin
+
+	declare fec date;
+
+    set fec = curdate();
+
+	insert into HistorialProducto (fechaHistorial, idVenta, idProducto, cantidad) values(curdate(), new.idVenta, new.idProducto, new.cantidad);
+
 end */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
